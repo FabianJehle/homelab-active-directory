@@ -1,0 +1,31 @@
+                    HOMELAB.LOCAL
+                           │
+                           │
+          ┌────────────────┴────────────────┐
+          │                                 │
+          │         Domain Controller       │
+          │              DC01               │
+          │                                 │
+          ├─────────────────────────────────┤
+          │ Active Directory (AD DS)        │
+          │ DNS Server                      │
+          │ DHCP Server                     │
+          │ SMB File Shares                 │
+          │ Group Policy (GPO)              │
+          └────────────────┬────────────────┘
+                           │
+                           │
+                    Domain Join
+                           │
+                           │
+          ┌────────────────▼────────────────┐
+          │                                 │
+          │              WS01               │
+          │         Windows 11 Pro          │
+          │                                 │
+          ├─────────────────────────────────┤
+          │ Domain User Login               │
+          │ Receives DNS from DC01          │
+          │ Receives Policies via GPO       │
+          │ Accesses SMB Shares             │
+          └─────────────────────────────────┘
